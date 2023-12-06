@@ -44,6 +44,7 @@ RTSeismo: A new Matlab-based Graphical User Interface tool for analyzing trigger
 2.1 Main Interface Layer:
 In RTSeismo, the computation begins by running the Main_Interface application program (Main_Interface.mlapp) by opening the current directory (RTSeismo) in MATLAB, which is designed and developed using the MATLAB App Designer wherein the main interface layer pops up consisting of different panels with different programs running in the background where one can enter the required input, get the results and plots (Fig. 2). The workflow of different panels is explained below in detail.
 ![image](https://github.com/Kalpna-Gahalaut/RTSeismo/assets/139765781/8098450f-00fc-45f4-80f6-ef288e057d33)
+
 Figure 2: The Main Interface Layer Window.
 2.2 Import Data File Panel: 
 The input data file panel has an edit field and a browse button (coded as uigetfile ({'*.*'}, 'File Selector')) where one can browse for the “Input file” ( Fig. 3). In this application, the main file needed is Inp-Res-WL.dat (details of all the data entries are given in Supplementary material). Reservoir data (Reservoir.dat) related to reservoir geometry, time history of maximum reservoir water level data (Waterlevel.dat) at the dam site, and earthquake data (Earthquake.xls) are additional data files needed for plotting. The same folder (RTSeismo) which contains the codes should include all these data files.
