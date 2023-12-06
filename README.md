@@ -24,7 +24,6 @@ of reservoir triggered seismicity.
 
 `RTSeismo` requires MATLAB. Install Latest version of `MATLAB`. 
 
-
 Download the RTSeimo folder in a directory. In RTSeismo, the computation begins by running the Main_Interface application program (Main_Interface.mlapp) by opening the current directory (RTSeismo) in MATLAB, which is designed and developed using the MATLAB App Designer wherein the main interface layer which is the main window pops up consisting of different panels with different programs running in the background where one can enter the required input, get the results and plots . Sample data files are also given in the same folder.
 
 									or
@@ -42,6 +41,7 @@ MIT
 RTSeismo: A new Matlab-based Graphical User Interface tool for analyzing triggered seismicity due to surface reservoir impoundment
 
 2.1 Main Interface Layer:
+
 In RTSeismo, the computation begins by running the Main_Interface application program (Main_Interface.mlapp) by opening the current directory (RTSeismo) in MATLAB, which is designed and developed using the MATLAB App Designer wherein the main interface layer pops up consisting of different panels with different programs running in the background where one can enter the required input, get the results and plots (Fig. 2). The workflow of different panels is explained below in detail.
 
 ![image](https://github.com/Kalpna-Gahalaut/RTSeismo/assets/139765781/8098450f-00fc-45f4-80f6-ef288e057d33)
@@ -49,6 +49,7 @@ In RTSeismo, the computation begins by running the Main_Interface application pr
 Figure 2: The Main Interface Layer Window.
 
 2.2 Import Data File Panel: 
+
 The input data file panel has an edit field and a browse button (coded as uigetfile ({'*.*'}, 'File Selector')) where one can browse for the “Input file” ( Fig. 3). In this application, the main file needed is Inp-Res-WL.dat (details of all the data entries are given in Supplementary material). Reservoir data (Reservoir.dat) related to reservoir geometry, time history of maximum reservoir water level data (Waterlevel.dat) at the dam site, and earthquake data (Earthquake.xls) are additional data files needed for plotting. The same folder (RTSeismo) which contains the codes should include all these data files.
 
 ![image](https://github.com/Kalpna-Gahalaut/RTSeismo/assets/139765781/9568262c-71aa-4f22-b156-c3ce129fd587)
@@ -56,6 +57,7 @@ The input data file panel has an edit field and a browse button (coded as uigetf
 Figure 3: Figure shows the highlighted panel for importing input data file into the program.
 
 2.3 Module 1 Panel: 
+
 This panel consists of two links one is “PE Components in Planview” and the other is “PE Components in Timeseries” (Fig. 4). Details of the background process of these two links are explained below.
 
 ![image](https://github.com/Kalpna-Gahalaut/RTSeismo/assets/139765781/9a698c2d-e1c8-410b-8075-b48f191c29b4)
@@ -63,6 +65,7 @@ This panel consists of two links one is “PE Components in Planview” and the 
 Figure 4: Figure shows the highlighted panel for calculating PE components.
 
 2.4 PE Components in Planview: 
+
 The equations to simulate the spatial variation of PE- components at a particular time epoch have been coded in MATLAB and the codes have been linked to the “PE Components in Planview”. Whenever the user clicks the link it prompts with a window “Input Arguments for Plan View” (Fig. 5).
 
 ![image](https://github.com/Kalpna-Gahalaut/RTSeismo/assets/139765781/9d685acd-fd4f-48cc-a272-f181947ab28b)
@@ -70,6 +73,7 @@ The equations to simulate the spatial variation of PE- components at a particula
 Figure 5: Figure shows the Input Argument window which appears after clicking the highlighted link.
 
 2.4.1 Description of Input arguments are as below:
+
 L – Number of calculation points in x direction 
 M – Number of calculation points in y direction
 Z – Depth of Calculation (in meter) 
@@ -86,6 +90,7 @@ nt – time epoch of calculation (corresponding to “ntime” in data file in S
 After entering the parameters, by clicking the buttons “STRESS”, DIFFUSION PP” and STRESSINDUCED PP”, the codes stress_p.m and ppdiffusion_p.m and ppstressinduced_p.m will be executed in the background, to calculate stress, diffusion pore pressure and stressinduced pore pressure.
 
 3. Illustrative example:
+   
 Here, to demonstrate how the application software is implemented, we will use a sample dataset same as used in [13]. The obtained results of stress (Fig. 6) and diffusion pore pressure (Fig. 7) will be displayed in the result panel, and will be saved in the RTSeismo directory as stress_result_p.dat (six components of stress) and ppdiffusion_result_p.dat (diffusion pore pressure).
 
 The code ppstressinduced_p.m takes a long time to execute. It will be updated further to speed up the process in the future.
@@ -99,6 +104,7 @@ Figure 6: Figure shows the sample result of six stress components (Eqs.1a-1f in 
 Figure 7: Figure shows the sample result of diffusion pore pressure (Eqs. 2 in Manuscript) in Planview.
 
 3.1 PE Components in Timeseries:
+
 Programs related to temporal variations of the components at a particular location are linked to the “PE Components in Timeseries”. When the user clicks the link, a popup “Input Arguments for Timeseries” appears to enter the necessary parameters (Fig. 8).
 
 ![image](https://github.com/Kalpna-Gahalaut/RTSeismo/assets/139765781/f2298a84-1b59-45c0-85c4-4f09560af883)
@@ -106,6 +112,7 @@ Programs related to temporal variations of the components at a particular locati
 Figure 8: Figure shows the Input Argument window which appears after clicking the highlighted link.
 
 3.1.1 Description of Input arguments are as below:
+
 L – 1 (As number of observation points in x direction will always be one) 
 M – 1 (As Number of observation points in y direction will always be one)
 Z – Depth of Calculation (in meter)
@@ -131,7 +138,9 @@ Figure 9: Figure shows the sample result of six stress components (Eqs 1a-1f in 
 Figure 11: Figure shows the sample result of stress-induced pore pressure (Eqs. 4 in Manuscript) in Timeseries.
 
 3.2 Module 2 Panel:
+
 The Module 2 panel consists of two links: “Fault Stability in Planview and Plotting” and “Fault Stability in Timeseries and Plotting”.
+
 3.3 Fault Stability in Planview and Plotting: 
 
 To compute and plot spatial variation of fault Stability the user has to click on “Fault stability in Planview and Plotting” and needs to provide parameters in popped up window (Fig. 12). 
@@ -141,6 +150,7 @@ To compute and plot spatial variation of fault Stability the user has to click o
 Figure 12:  Input Argument window which appears after clicking the highlighted link.
 
 3.3.1 Description of Input parameters are as below:
+
 Th – Dip of the fault
 ALAM – Dip direction of the fault
 Shi – Rake of the fault
@@ -156,6 +166,7 @@ Once “Plot” button is clicked (Fig. 12), the program (FS_p.m) will use these
 Figure 13: Panels (a) to (e) show plot of sample results using MATLAB code Planview_Plot.m.
 
 3.4 Fault Stability in Timeseries and Plotting:
+
 The computation and plotting of temporal variation of fault stability results will be performed after clicking the button “Fault stability in time series and plotting” for the parameters as shown in (Fig. 14). 
 
 ![image](https://github.com/Kalpna-Gahalaut/RTSeismo/assets/139765781/2ddcdaa6-1402-42c3-897e-4b1f9e3ed500)
@@ -163,6 +174,7 @@ The computation and plotting of temporal variation of fault stability results wi
 Figure 14: Input Argument window which appears after clicking highlighted link.
 
 3.4.1 Description of Input parameters are as below:
+
 Th – Dip of the fault.
 ALAM – Dip direction of the fault.
 Shi – Rake of the fault.
@@ -175,31 +187,52 @@ Figure 15: Panels (a) - (b) show plot of sample results using MATLAB code Timese
 Matlab code (FS t.m) performs the computations, and the results of temporal variation of fault stability are saved in the FS_Timeseries_results.dat file. These results will be plotted (as shown in (Fig. 15(a-b)) using the MATLAB code "Timeseries Plot.m".
 
 Details of all data files:
+
 1. The parameters and the format of the input data file is as follows and the file name should be saved as “Inp-Res-WL.dat”.
   The first row of the data file should contain the value of:
+
 	 N = Total Number of cuboids in which the reservoir water load is simulated.
   The second row should contain the following values:
+  
 	MM = Total number of time epochs of water load at dam site.
+
 	c1 = factor to convert days into seconds.
+
 From the third row it should contain the water level data in the following format till it reaches the total number of time epochs of water load at dam site:
+
 	ntime = number of time epoch.
+
 	date = date of time epoch.
+
 	pk = reservoir water level from MSL (in meter) at a particular date of time epoch at dam site.
+
 After it reaches the MM value from the next row it should contain the information of the water load as below:
+
 	nn = Number of cuboids of reservoir water load.
+
 	X0 = Dimension of the cuboid in x direction (in meter).
+
 	Y0 = Dimension of the cuboid in y direction (in meter).
+
 	XX1 = Distance between origin of the cuboid and origin of the system in x direction (in meter).
+
 	YY1 = Distance between origin of the cuboid and calculation point in y direction (in meter). 
+
 	pf = maximum water column height in the cuboid (in meter).
+
 	Coordinate system:  x axis points north, y axis points east and z axis vertically downward.
+
 	Origin of the system: origin of cuboid at dam site.
-2. The following are the data files necessary to do plotting must be included in the directory (RTSeismo) and the format of the data of the particular files is as follows.
+
+3. The following are the data files necessary to do plotting must be included in the directory (RTSeismo) and the format of the data of the particular files is as follows.
      “Reservoir.dat”
+   
           	Longitude and latitude of origin of “N” cuboids
       “Waterlevel.dat”
+   
           	Date and reservoir water level from MSL (in meter) of total number of time epochs at dam site
       “Earthquake.xls”
+   
           	Longitude and latitude of earthquakes.
 
         
