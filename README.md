@@ -75,16 +75,27 @@ Figure 5: Figure shows the Input Argument window which appears after clicking th
 2.4.1 Description of Input arguments are as below:
 
 L – Number of calculation points in x direction 
+
 M – Number of calculation points in y direction
+
 Z – Depth of Calculation (in meter) 
+
 C – Hydraulic diffusivity (in m2/s)
+
 Tdisc – Discretization in water level time series at dam site (in days)
+
 SC – Skempton’s coefficient
+
 Xobs – Distance between origin of system and southmost calculation point in x direction (in meter) 
+
 Yobs – Distance between origin of system and westmost calculation point in y direction (in meter) 
+
 Xdisc – Discretization in calculation grid in x direction (in meter) 
+
 Ydisc – Discretization in calculation grid in y direction (in meter) 
+
 Damhmsl – Height from MSL at the origin of the system (in meter)
+
 nt – time epoch of calculation (corresponding to “ntime” in data file in Supplementary material) 
 
 After entering the parameters, by clicking the buttons “STRESS”, DIFFUSION PP” and STRESSINDUCED PP”, the codes stress_p.m and ppdiffusion_p.m and ppstressinduced_p.m will be executed in the background, to calculate stress, diffusion pore pressure and stressinduced pore pressure.
@@ -114,13 +125,21 @@ Figure 8: Figure shows the Input Argument window which appears after clicking th
 3.1.1 Description of Input arguments are as below:
 
 L – 1 (As number of observation points in x direction will always be one) 
+
 M – 1 (As Number of observation points in y direction will always be one)
+
 Z – Depth of Calculation (in meter)
+
 C – Hydraulic diffusivity (in m2/s)
+
 Tdisc – Discretization in water level time series at dam site (in days)
+
 SC – Skempton’s coefficient
+
 Xobs – Distance between origin of the system and calculation point in x direction (in meter)
+
 Yobs – Distance between origin of the system and calculation point in y direction (in meter)
+
 Damhmsl – Height from MSL at the origin of the system (in meter)
 
 After entering the parameters, the codes stress_t.m, ppdiffusion_t.m, and ppstressinduced_t.m, which are linked to the respective "STRESS", "DIFFUSION PP," and "STRESSINDUCED PP" buttons will be executed in order to calculate stress, diffusion pore pressure, and stress-induced pore pressure. The results of stress (Fig. 9), diffusion pore pressure (Fig. 10), and stress induced pore pressure (Fig. 11) will be displayed in the result panel and saved in the RTSeismo directory as stress _result_t.dat (six stress components), ppdiffusion_result_t.dat (diffusion pore pressure), and ppstressinduced_result_t.dat (stressinduced pore pressure).
@@ -152,13 +171,21 @@ Figure 12:  Input Argument window which appears after clicking the highlighted l
 3.3.1 Description of Input parameters are as below:
 
 Th – Dip of the fault
+
 ALAM – Dip direction of the fault
+
 Shi – Rake of the fault
+
 Mu – Coefficient of friction
+
 Olat – latitude of origin of the system (in km)
+
 Olon – longitude of origin of the system (in km)
+
 Olatd – distance between 1° latitude in reservoir region (in km)
+
 Olond – distance between 1° longitude in reservoir region (in km)
+
 Once “Plot” button is clicked (Fig. 12), the program (FS_p.m) will use these parameters to compute the resolved shear and normal stress on the fault plane (Δτ and Δσ), and fault stability (ΔS and ΔSP) in Planview. These results are stored as FS_Planview_results.dat file in RTSeismo directory and will be plotted through Matlab code Planview_Plot.m as illustrated in Fig. (13 a-e).
 
 ![image](https://github.com/Kalpna-Gahalaut/RTSeismo/assets/139765781/44601efd-7bb7-4317-8cf5-6f805f6300fa)
@@ -176,9 +203,13 @@ Figure 14: Input Argument window which appears after clicking highlighted link.
 3.4.1 Description of Input parameters are as below:
 
 Th – Dip of the fault.
+
 ALAM – Dip direction of the fault.
+
 Shi – Rake of the fault.
+
 Mu – Coefficient of friction.
+
 
 ![image](https://github.com/Kalpna-Gahalaut/RTSeismo/assets/139765781/5dbefc20-bc19-4a9b-b065-4d04819021dd)
 
