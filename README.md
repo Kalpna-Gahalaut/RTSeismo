@@ -1,8 +1,9 @@
 # RTSeismo
 - [RTSeismo](#RTSeismo)
   - [Introduction](#introduction)
-  - [Getting started](#getting-started)
+  - [How to run](#How-to-run)
   - [Licence](#licence)
+  - [Step-by-Step Procedure on how to run the Software](#Step-by-Step-Procedure-on-how-to-run-the-Software)
 
 
 ## Introduction
@@ -38,9 +39,11 @@ or Find Main_Interface in the APP tab of Matlab.
 
 MIT
 
-RTSeismo: A new Matlab-based Graphical User Interface tool for analyzing triggered seismicity due to surface reservoir impoundment
+## Step-by-Step Procedure on how to run the Software
 
-1. Details of all data files:
+**Title: RTSeismo: A new Matlab-based Graphical User Interface tool for analyzing triggered seismicity due to surface reservoir 			   impoundment**
+
+**1. Details of all data files:**
    
 1.1 The parameters and the format of the input data file is as follows and the file name should be saved as “Inp-Res-WL.dat”.
     The first row of the data file should contain the value of:
