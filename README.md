@@ -45,7 +45,8 @@ MIT
 **Title: RTSeismo: A new Matlab-based Graphical User Interface tool for analyzing triggered seismicity due to surface reservoir 			   impoundment**
 
 **1. Details of all data files to be used by the software:**
-   
+                Coordinate system:  x axis points north, y axis points east and z axis vertically downward.
+	        Origin of the system: origin of cuboid at dam site.
   1.1 The parameters and the format of the input data file are as follows and the file name should be saved as “Inp-Res-WL.dat”.
     The first row of the data file should contain the value of:
     
@@ -71,10 +72,8 @@ MIT
 	  iv) XX1 = Distance between origin of the cuboid and origin of the system in x direction (in meter).
 	  v) YY1 = Distance between origin of the cuboid and calculation point in y direction (in meter). 
 	  vi) pf = maximum water column height in the cuboid (in meter).
-	  vii) Coordinate system:  x axis points north, y axis points east and z axis vertically downward.
-	  viii) Origin of the system: origin of cuboid at dam site.
    
- 2. The following are data files necessary to do plotting must be included in the directory (RTSeismo) and the format of the data of 
+ 1.2 The following are data files necessary to do plotting must be included in the directory (RTSeismo) and the format of the data of 
     the particular files is as follows.
    
      “Reservoir.dat”
@@ -113,7 +112,15 @@ This panel consists of two links one is “PE Components in Planview” and the 
 
 Figure 4: Figure shows the highlighted panel for calculating PE components.
 
-**2.3 PE Components in Planview:** 
+**2.3 Module 2 Panel:**
+
+The Module 2 panel consists of two links: “Fault Stability in Planview and Plotting” and “Fault Stability in Timeseries and Plotting”.
+
+**3. Illustrative example:**
+
+Here, to demonstrate how the application software is implemented, we will use a sample dataset same as used in [13].
+
+**3.1 PE Components in Planview:** 
 
 The equations to simulate the spatial variation of PE- components at a particular time epoch have been coded in MATLAB and the codes have been linked to the “PE Components in Planview”. Whenever the user clicks the link it prompts with a window “Input Arguments for Plan View” (Fig. 5).
 
@@ -121,7 +128,7 @@ The equations to simulate the spatial variation of PE- components at a particula
 
 Figure 5: Figure shows the Input Argument window which appears after clicking the highlighted link.
 
-**2.3.1 Description of Input arguments are as below:**
+Description of Input arguments are as below:
 
 L – Number of calculation points in x direction 
 
@@ -149,9 +156,7 @@ nt – time epoch of calculation (corresponding to “ntime” in data file in S
 
 After entering the parameters, by clicking the buttons “STRESS”, DIFFUSION PP” and STRESSINDUCED PP”, the codes stress_p.m and ppdiffusion_p.m and ppstressinduced_p.m will be executed in the background, to calculate stress, diffusion pore pressure and stressinduced pore pressure.
 
-**3. Illustrative example:**
-   
-Here, to demonstrate how the application software is implemented, we will use a sample dataset same as used in [13]. The obtained results of stress (Fig. 6) and diffusion pore pressure (Fig. 7) will be displayed in the result panel, and will be saved in the RTSeismo directory as stress_result_p.dat (six components of stress) and ppdiffusion_result_p.dat (diffusion pore pressure).
+The obtained results of stress (Fig. 6) and diffusion pore pressure (Fig. 7) will be displayed in the result panel, and will be saved in the RTSeismo directory as stress_result_p.dat (six components of stress) and ppdiffusion_result_p.dat (diffusion pore pressure).
 
 The code ppstressinduced_p.m takes a long time to execute. It will be updated further to speed up the process in the future.
 
@@ -163,7 +168,7 @@ Figure 6: Figure shows the sample result of six stress components (Eqs.1a-1f in 
 
 Figure 7: Figure shows the sample result of diffusion pore pressure (Eqs. 2 in Manuscript) in Planview.
 
-**3.1 PE Components in Timeseries:**
+**3.2 PE Components in Timeseries:**
 
 Programs related to temporal variations of the components at a particular location are linked to the “PE Components in Timeseries”. When the user clicks the link, a popup “Input Arguments for Timeseries” appears to enter the necessary parameters (Fig. 8).
 
@@ -171,7 +176,7 @@ Programs related to temporal variations of the components at a particular locati
 
 Figure 8: Figure shows the Input Argument window which appears after clicking the highlighted link.
 
-**3.1.1 Description of Input arguments are as below:**
+Description of Input arguments are as below:
 
 L – 1 (As number of observation points in x direction will always be one) 
 
@@ -205,10 +210,6 @@ Figure 9: Figure shows the sample result of six stress components (Eqs 1a-1f in 
 
 Figure 11: Figure shows the sample result of stress-induced pore pressure (Eqs. 4 in Manuscript) in Timeseries.
 
-**3.2 Module 2 Panel:**
-
-The Module 2 panel consists of two links: “Fault Stability in Planview and Plotting” and “Fault Stability in Timeseries and Plotting”.
-
 **3.3 Fault Stability in Planview and Plotting:** 
 
 To compute and plot spatial variation of fault Stability the user has to click on “Fault stability in Planview and Plotting” and needs to provide parameters in popped-up window (Fig. 12). 
@@ -217,7 +218,7 @@ To compute and plot spatial variation of fault Stability the user has to click o
 
 Figure 12:  Input Argument window which appears after clicking the highlighted link.
 
-**3.3.1 Description of Input parameters are as below:**
+Description of Input parameters are as below:
 
 Th – Dip of the fault
 
@@ -249,7 +250,7 @@ The computation and plotting of temporal variation of fault stability results wi
 
 Figure 14: Input Argument window which appears after clicking highlighted link.
 
-**3.4.1 Description of Input parameters are as below:**
+Description of Input parameters are as below:
 
 Th – Dip of the fault.
 
