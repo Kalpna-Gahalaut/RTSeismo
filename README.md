@@ -40,6 +40,54 @@ MIT
 
 RTSeismo: A new Matlab-based Graphical User Interface tool for analyzing triggered seismicity due to surface reservoir impoundment
 
+1. Details of all data files:
+   
+1.1 The parameters and the format of the input data file is as follows and the file name should be saved as “Inp-Res-WL.dat”.
+    The first row of the data file should contain the value of:
+    
+        i) N = Total Number of cuboids in which the reservoir water load is simulated.
+       
+    The second row should contain the following values:
+    
+        i) MM = Total number of time epochs of water load at dam site.
+       
+        iii) c1 = factor to convert days into seconds.
+       
+     From the third row it should contain the water level data in the following format till it reaches the total number of time epochs 
+     of water load at dam site:
+     
+        i) ntime = number of time epoch.
+	
+        ii) date = date of time epoch.
+	
+        iii) pk = reservoir water level from MSL (in meter) at a particular date of time epoch at dam site.
+	
+     After it reaches the MM value from the next row it should contain the information of the water load as below:
+	  i) nn = Number of cuboids of reservoir water load.
+	  ii) X0 = Dimension of the cuboid in x direction (in meter).
+	  iii) Y0 = Dimension of the cuboid in y direction (in meter).
+	  iv) XX1 = Distance between origin of the cuboid and origin of the system in x direction (in meter).
+	  v) YY1 = Distance between origin of the cuboid and calculation point in y direction (in meter). 
+	  vi) pf = maximum water column height in the cuboid (in meter).
+	  vii) Coordinate system:  x axis points north, y axis points east and z axis vertically downward.
+	  viii) Origin of the system: origin of cuboid at dam site.
+2. The following are the data files necessary to do plotting must be included in the directory (RTSeismo) and the format of the data of 
+   the particular files is as follows.
+   
+     “Reservoir.dat”
+   
+	 Longitude and latitude of origin of “N” cuboids
+
+      “Waterlevel.dat”
+      
+	  Date and reservoir water level from MSL (in meter) of total number of time epochs at dam site
+
+      “Earthquake.xls”
+      
+	  Longitude and latitude of earthquakes.
+
+
+
 2.1 Main Interface Layer:
 
 In RTSeismo, the computation begins by running the Main_Interface application program (Main_Interface.mlapp) by opening the current directory (RTSeismo) in MATLAB, which is designed and developed using the MATLAB App Designer wherein the main interface layer pops up consisting of different panels with different programs running in the background where one can enter the required input, get the results and plots (Fig. 2). The workflow of different panels is explained below in detail.
@@ -217,53 +265,6 @@ Figure 15: Panels (a) - (b) show plot of sample results using MATLAB code Timese
 
 Matlab code (FS t.m) performs the computations, and the results of temporal variation of fault stability are saved in the FS_Timeseries_results.dat file. These results will be plotted (as shown in (Fig. 15(a-b)) using the MATLAB code "Timeseries Plot.m".
 
-Details of all data files:
 
-1. The parameters and the format of the input data file is as follows and the file name should be saved as “Inp-Res-WL.dat”.
-  The first row of the data file should contain the value of:
-
-	 N = Total Number of cuboids in which the reservoir water load is simulated.
-  The second row should contain the following values:
-  
-	MM = Total number of time epochs of water load at dam site.
-
-	c1 = factor to convert days into seconds.
-
-From the third row it should contain the water level data in the following format till it reaches the total number of time epochs of water load at dam site:
-
-	ntime = number of time epoch.
-
-	date = date of time epoch.
-
-	pk = reservoir water level from MSL (in meter) at a particular date of time epoch at dam site.
-
-After it reaches the MM value from the next row it should contain the information of the water load as below:
-
-	nn = Number of cuboids of reservoir water load.
-
-	X0 = Dimension of the cuboid in x direction (in meter).
-
-	Y0 = Dimension of the cuboid in y direction (in meter).
-
-	XX1 = Distance between origin of the cuboid and origin of the system in x direction (in meter).
-
-	YY1 = Distance between origin of the cuboid and calculation point in y direction (in meter). 
-
-	pf = maximum water column height in the cuboid (in meter).
-
-	Coordinate system:  x axis points north, y axis points east and z axis vertically downward.
-
-	Origin of the system: origin of cuboid at dam site.
-
-3. The following are the data files necessary to do plotting must be included in the directory (RTSeismo) and the format of the data of the particular files is as follows.
-     “Reservoir.dat”
-   
-          	Longitude and latitude of origin of “N” cuboids
-      “Waterlevel.dat”
-   
-          	Date and reservoir water level from MSL (in meter) of total number of time epochs at dam site
-      “Earthquake.xls”
-   
-          	Longitude and latitude of earthquakes.
 
         
