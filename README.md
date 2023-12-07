@@ -46,7 +46,7 @@ MIT
 
 **1. Details of all data files to be used by the software:**
 
-        Coordinate system:  x axis points north, y axis points east and z axis vertically downward.
+           Coordinate system:  x axis points north, y axis points east and z axis vertically downward.
 	        Origin of the system: origin of cuboid at dam site.
 	 
   1.1 The parameters and the format of the input data file are as follows and the file name should be saved as “Inp-Res-WL.dat”.
