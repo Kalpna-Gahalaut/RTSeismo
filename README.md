@@ -23,9 +23,9 @@ of reservoir triggered seismicity.
 
 ## How to run
 
-`RTSeismo` requires MATLAB. Install Latest version of `MATLAB`. 
+`RTSeismo` requires MATLAB. Install the Latest version of `MATLAB`. 
 
-Download the RTSeimo folder in a directory. In RTSeismo, the computation begins by running the Main_Interface application program (Main_Interface.mlapp) by opening the current directory (RTSeismo) in MATLAB, which is designed and developed using the MATLAB App Designer wherein the main interface layer which is the main window pops up consisting of different panels with different programs running in the background where one can enter the required input, get the results and plots . Sample data files are also given in the same folder.
+Download the RTSeimo folder in a directory. In RTSeismo, the computation begins by running the Main_Interface application program (Main_Interface.mlapp) by opening the current directory (RTSeismo) in MATLAB, which is designed and developed using the MATLAB App Designer wherein the main interface layer which is the main window pops up consisting of different panels with different programs running in the background where one can enter the required input, get the results and plots. Sample data files are also given in the same folder.
 
 							or
 
@@ -46,7 +46,7 @@ MIT
 
 **1. Details of all data files to be used by the software:**
    
-  1.1 The parameters and the format of the input data file is as follows and the file name should be saved as “Inp-Res-WL.dat”.
+  1.1 The parameters and the format of the input data file are as follows and the file name should be saved as “Inp-Res-WL.dat”.
     The first row of the data file should contain the value of:
     
         i) N = Total Number of cuboids in which the reservoir water load is simulated.
@@ -64,6 +64,7 @@ MIT
         iii) pk = reservoir water level from MSL (in meter) at a particular date of time epoch at dam site.
 	
      After it reaches the MM value from the next row it should contain the information of the water load as below:
+     
 	  i) nn = Number of cuboids of reservoir water load.
 	  ii) X0 = Dimension of the cuboid in x direction (in meter).
 	  iii) Y0 = Dimension of the cuboid in y direction (in meter).
@@ -72,6 +73,7 @@ MIT
 	  vi) pf = maximum water column height in the cuboid (in meter).
 	  vii) Coordinate system:  x axis points north, y axis points east and z axis vertically downward.
 	  viii) Origin of the system: origin of cuboid at dam site.
+   
  2. The following are data files necessary to do plotting must be included in the directory (RTSeismo) and the format of the data of 
     the particular files is as follows.
    
@@ -95,7 +97,7 @@ In RTSeismo, the computation begins by running the Main_Interface application pr
 
 Figure 2: The Main Interface Layer Window.
 
-**2.1 Import Data File Panel: **
+**2.1 Import Data File Panel:**
 
 The input data file panel has an edit field and a browse button (coded as uigetfile ({'*.*'}, 'File Selector')) where one can browse for the “Input file” ( Fig. 3). In this application, the main file needed is Inp-Res-WL.dat (details of all the data entries are given in Supplementary material). Reservoir data (Reservoir.dat) related to reservoir geometry, time history of maximum reservoir water level data (Waterlevel.dat) at the dam site, and earthquake data (Earthquake.xls) are additional data files needed for plotting. The same folder (RTSeismo) which contains the codes should include all these data files.
 
@@ -103,7 +105,7 @@ The input data file panel has an edit field and a browse button (coded as uigetf
 
 Figure 3: Figure shows the highlighted panel for importing input data file into the program.
 
-**2.2 Module 1 Panel: **
+**2.2 Module 1 Panel:** 
 
 This panel consists of two links one is “PE Components in Planview” and the other is “PE Components in Timeseries” (Fig. 4). Details of the background process of these two links are explained below.
 
@@ -207,7 +209,7 @@ Figure 11: Figure shows the sample result of stress-induced pore pressure (Eqs. 
 
 The Module 2 panel consists of two links: “Fault Stability in Planview and Plotting” and “Fault Stability in Timeseries and Plotting”.
 
-**3.3 Fault Stability in Planview and Plotting: **
+**3.3 Fault Stability in Planview and Plotting:** 
 
 To compute and plot spatial variation of fault Stability the user has to click on “Fault stability in Planview and Plotting” and needs to provide parameters in popped-up window (Fig. 12). 
 
